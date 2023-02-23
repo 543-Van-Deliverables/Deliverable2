@@ -14,21 +14,11 @@ Glink="https://github.com/543-Van-Deliverables/Deliverable2/raw/main/"
 Flink="CountryRankingFinal.csv"
 CRF=read.csv(paste0(Glink,Flink))
 ```
-```{r}
-names(CRF)
-```
 
-
-```{r}
-summary(CRF$Fertility)
-```
 ```{r}
 library(ggplot2)
 base=ggplot(data=CRF, aes(x=Region, y=Fertility))
 base+geom_boxplot() + theme(axis.text.x = element_text(angle = 90,size = 8,vjust = .5))
-```
-```{r}
-tapply(CRF$Fertility,CRF$Region, summary)
 ```
 ```{r}
 titleText="Fertility Rates of Women Around the World"
